@@ -10,9 +10,8 @@ class Queen(object):
             board[self.pos[0]][i] += 1
             board[i][self.pos[1]] += 1
             
-        #대각선 추가해야해요
-    
-    
+        #대각선분
+            
     
 def show_board():
     for i in range(queen):
@@ -21,14 +20,17 @@ def show_board():
         print('')
     print('\n')
     
+def show_index():
+    for i in range(queen):
+        for j in range(len(board[i])):
+            print("({},{})".format(i, j), end=' ')
+        print('\n')
     
 def return_possible_pos() -> tuple:
     for i in range(len(board)):
-        for j in range(len(board)):
+        for j in range(len(board[i])):
             if board[i][j] == 0:
                 return (i, j)
-            else:
-                return None
 
 def make_queen():
     for queen in queen_list:
@@ -38,14 +40,14 @@ def make_queen():
             break
     
 if __name__ == "__main__":
-    queen = 8
+    queen = 5
     board = np.zeros((queen, queen), dtype='int').tolist()
     queen_list = [0] * queen
 #     queen_list[0] = Queen((randint(0, queen - 1), randint(0, queen - 1)))
-    queen_list[0] = Queen((2, 2))
+    queen_list[0] = Queen((2, 1))
     make_queen()
     show_board()
-    
+    show_index()
     
 #for i in range(1, 8):
 #    if return_possible_pos:
@@ -53,4 +55,8 @@ if __name__ == "__main__":
 #    else:
 #        print('Queen: "There is no place to go!"')
 #    board()
+
+
+
+
 
