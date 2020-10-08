@@ -43,7 +43,7 @@ if __name__ == "__main__":
     queen = 5
     board = np.zeros((queen, queen), dtype='int').tolist()
     queen_list = [0] * queen
-#     queen_list[0] = Queen((randint(0, queen - 1), randint(0, queen - 1)))
+#     퀸 랜덤 생성: queen_list[0] = Queen((randint(0, queen - 1), randint(0, queen - 1)))
     queen_list[0] = Queen((2, 1))
     make_queen()
     show_board()

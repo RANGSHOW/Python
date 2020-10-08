@@ -23,5 +23,7 @@ if __name__ == '__main__':
 
 
 
+
+# 가장 짧은 해석
 def solution(array, commands):
     return list(map(lambda x:sorted(array[x[0]-1:x[1]])[x[2]-1], commands))
